@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Переведи это на язык</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Переведи это на язык</h1>
+        <form id="translate-form">
+            <select id="style" required>
+                <option value="Токсичный коллега">Токсичный коллега</option>
+                <option value="Менеджер в ресурсе">Менеджер в ресурсе</option>
+                <option value="Зумерский">Зумерский</option>
+                <option value="Лягушачий">Лягушачий</option>
+                <option value="Коучинговый">Коучинговый</option>
+                <option value="Армейский">Армейский</option>
+            </select>
+            <textarea id="phrase" placeholder="Введите фразу..." required></textarea>
+            <button type="submit">Перевести</button>
+        </form>
+        <div id="loader" class="loader" style="display:none;"></div>
+        <div id="result" class="result"></div>
+        <select id="voice-select" style="display:none;margin-top:12px;"></select>
+        <button id="speak-btn" type="button" style="display:none;margin-top:12px;">🔊 Озвучить</button>
+        <div id="error" class="error" style="display:none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
