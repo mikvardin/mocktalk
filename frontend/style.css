@@ -1,20 +1,27 @@
 body {
-  font-family: 'Inter', sans-serif;
-  background: url('memes/main_wallpaper.png') no-repeat center center fixed;
-  background-size: cover;
   margin: 0;
-  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url("memes/main_wallpaper.png");
+  background-size: cover;
+  background-position: center;
   color: #fff;
+  min-height: 100vh;
 }
 
 .container {
-  background: rgba(0, 0, 0, 0.7);
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin-top: 60px;
   text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -22,61 +29,65 @@ h1 {
   margin-bottom: 20px;
 }
 
-.logo {
-  width: 100px;
-  margin-bottom: 20px;
-}
-
-select, textarea, button {
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
   font-size: 16px;
   padding: 10px;
-  margin: 10px 0;
-  width: 100%;
+  margin-top: 10px;
   border-radius: 8px;
   border: none;
-  box-sizing: border-box;
 }
 
 button {
-  background-color: #00c853;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #ff4081;
   color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 button:hover {
-  background-color: #00a146;
+  background-color: #f50057;
+}
+
+.select-with-icon select {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
 }
 
 .result {
-  font-size: 18px;
   margin-top: 20px;
-  padding: 15px;
-  background-color: #263238;
-  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .error {
-  color: red;
-  margin-top: 12px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 80px;
+  margin-top: 20px;
+  color: #ff8080;
+  font-weight: bold;
 }
 
 .loader {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #00c853;
-  border-radius: 50%;
+  margin: 20px auto;
   width: 40px;
   height: 40px;
-  margin: 20px auto;
+  border: 4px solid #fff;
+  border-top: 4px solid #ff4081;
+  border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
