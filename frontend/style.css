@@ -29,9 +29,9 @@ body {
 }
 
 .logo {
-  height: auto;
-  width: 100;
-  margin-left: 6px;
+  height: 140px;
+  width: 140px;
+  margin-left: 0px;
 }
 
 h1 {
@@ -40,7 +40,7 @@ h1 {
 }
 
 textarea {
-  width: 100%;
+  width: 90%;
   height: 100px;
   resize: none;
   padding: 12px;
@@ -161,6 +161,7 @@ button:hover, select:hover {
   padding: 18px 36px;
   border-radius: 14px;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
 
