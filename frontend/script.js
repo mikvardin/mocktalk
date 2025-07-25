@@ -41,7 +41,7 @@ function playClickSound() {
     const oscillator = context.createOscillator();
     const gainNode = context.createGain();
 
-    oscillator.type = 'square';
+    oscillator.type = 'sine';
     oscillator.frequency.setValueAtTime(600, context.currentTime);
     gainNode.gain.setValueAtTime(0.1, context.currentTime);
 
