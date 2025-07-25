@@ -22,4 +22,7 @@ class TranslateRequest(BaseModel):
 async def translate(req: TranslateRequest):
     prompt = f"Переведи фразу '{req.phrase}' на стиль '{req.style}' для рабочего общения."
     gpt_result = await ask_gpt(prompt)
-    return {"result": gpt_result} 
+    return {"result": gpt_result}
+@app.get("/")
+def root():
+    return {"status": "ok"}
