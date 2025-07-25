@@ -117,8 +117,14 @@ form.addEventListener('submit', async function (e) {
         const data = await resp.json();
         hideLoader();
         showResult(data.result);
+        playDoneSound();
     } catch (err) {
         hideLoader();
         showError('Ошибка перевода. Попробуйте ещё раз.');
     }
 });
+
+function playDoneSound() {
+    const audio = new Audio('memes/sound done 2.mp3');
+    audio.play();
+}
