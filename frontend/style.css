@@ -46,7 +46,7 @@ textarea {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-top: 12px;
+  margin-top: 0px;
   font-size: 16px;
 }
 
@@ -153,3 +153,24 @@ button:hover, select:hover {
   gap: 10px;
 }
 
+.translate-button {
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 20px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.translate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.translate-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
