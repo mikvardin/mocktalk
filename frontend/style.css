@@ -46,7 +46,7 @@ textarea {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  margin-top: 0px;
+  margin-top: 20px;
   font-size: 16px;
 }
 
@@ -78,6 +78,7 @@ button:active {
   width: 100%;
   border-radius: 8px;
   border: none;
+  margin-bottom: 10px;
 }
 
 .result {
@@ -146,7 +147,7 @@ button:hover, select:hover {
 }
 
 .voice-controls {
-  margin-top: 50px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,16 +155,14 @@ button:hover, select:hover {
 }
 
 .translate-button {
-  background-color: #1f1f1f;
+  background: linear-gradient(145deg, #111, #333);
   color: #fff;
-  font-size: 20px;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 24px;
+  padding: 18px 36px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
 }
+
 
 .translate-button:hover {
   transform: translateY(-2px);
