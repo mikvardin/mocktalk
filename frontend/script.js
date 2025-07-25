@@ -5,6 +5,19 @@ const errorDiv = document.getElementById('error');
 const speakBtn = document.getElementById('speak-btn');
 const voiceSelect = document.getElementById('voice-select');
 
+const slogans = [
+    'Пиши, как есть — остальное мы подадим как жесть.',
+    'Скучный слог? Будет мем и пролог!',
+    'От фразы до ржаки — одна кнопка в атаке.',
+    'Кринжуй с умом — говори с огоньком!'
+  ];
+
+  const sloganEl = document.getElementById('slogan');
+  if (sloganEl) {
+    const random = slogans[Math.floor(Math.random() * slogans.length)];
+    sloganEl.textContent = random;
+  }
+
 let voices = [];
 
 function populateVoices() {
