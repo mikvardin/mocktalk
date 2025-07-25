@@ -125,6 +125,6 @@ form.addEventListener('submit', async function (e) {
 });
 
 function playDoneSound() {
-    const audio = new Audio('memes/sound done 2.mp3');
+    const audio = new Audio('memes/done.mp3');
     audio.play();
 }
