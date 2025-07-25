@@ -44,9 +44,11 @@ function showLoader() {
     speakBtn.style.display = 'none';
     voiceSelect.style.display = 'none';
 }
+
 function hideLoader() {
     loader.style.display = 'none';
 }
+
 function showResult(text) {
     resultDiv.textContent = text;
     resultDiv.classList.add('visible');
@@ -55,6 +57,7 @@ function showResult(text) {
     voiceSelect.style.display = voices.length ? 'inline-block' : 'none';
     speakBtn.onclick = () => speakText(text);
 }
+
 function showError(msg) {
     errorDiv.textContent = msg;
     errorDiv.style.display = 'block';
@@ -64,7 +67,7 @@ function showError(msg) {
     voiceSelect.style.display = 'none';
 }
 
-form.addEventListener('submit', async function(e) {
+form.addEventListener('submit', async function (e) {
     e.preventDefault();
     const phrase = document.getElementById('phrase').value.trim();
     const style = document.getElementById('style').value;
@@ -74,7 +77,7 @@ form.addEventListener('submit', async function(e) {
     }
     showLoader();
     try {
-        const resp = await fetch('http://localhost:8000/translate', {
+        const resp = await fetch('https://mocktalk.onrender.com/translate', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ phrase, style })
@@ -87,4 +90,4 @@ form.addEventListener('submit', async function(e) {
         hideLoader();
         showError('Ошибка перевода. Попробуйте ещё раз.');
     }
-}); 
+});
