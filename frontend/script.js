@@ -41,15 +41,15 @@ function playClickSound() {
     const oscillator = context.createOscillator();
     const gainNode = context.createGain();
 
-    oscillator.type = 'sine';
-    oscillator.frequency.setValueAtTime(600, context.currentTime);
+    oscillator.type = 'triangle';
+    oscillator.frequency.setValueAtTime(400, context.currentTime);
     gainNode.gain.setValueAtTime(0.1, context.currentTime);
 
     oscillator.connect(gainNode);
     gainNode.connect(context.destination);
 
     oscillator.start();
-    oscillator.stop(context.currentTime + 0.1);
+    oscillator.stop(context.currentTime + 0.2);
 }
 
 function showLoader() {
