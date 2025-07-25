@@ -36,6 +36,22 @@ function speakText(text) {
     }
 }
 
+function playClickSound() {
+    const context = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = context.createOscillator();
+    const gainNode = context.createGain();
+
+    oscillator.type = 'square';
+    oscillator.frequency.setValueAtTime(600, context.currentTime);
+    gainNode.gain.setValueAtTime(0.1, context.currentTime);
+
+    oscillator.connect(gainNode);
+    gainNode.connect(context.destination);
+
+    oscillator.start();
+    oscillator.stop(context.currentTime + 0.1);
+}
+
 function showLoader() {
     loader.style.display = 'block';
     resultDiv.classList.remove('visible');
@@ -69,6 +85,8 @@ function showError(msg) {
 
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    playClickSound();  // 🔊 добавлено
+
     const phrase = document.getElementById('phrase').value.trim();
     const style = document.getElementById('style').value;
     if (!phrase) {
