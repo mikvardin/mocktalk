@@ -29,13 +29,8 @@ body {
   gap: 12px; /* расстояние между лого и слоганом */
 }
 
-.logo {
-  width: 350px;
-  height: 350px;
-}
-
 h1 {
-  font-size: 28px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
