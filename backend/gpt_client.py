@@ -6,7 +6,7 @@ load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_API_URL = "https://api.openai.com/v1/chat/completions"
-MODEL = "gpt-4o"
+MODEL = "gpt-3.5-turbo-0125"
 
 SYSTEM_PROMPT = (
     "Переводи в очень веселой манере фразы с обычного языка на придуманные языки. "
@@ -38,4 +38,4 @@ async def ask_gpt(prompt: str) -> str:
         resp = await client.post(OPENAI_API_URL, headers=headers, json=data, timeout=30)
         resp.raise_for_status()
         result = resp.json()
-        return result["choices"][0]["message"]["content"].strip() 
+        return result["choices"][0]["message"]["content"].strip()
